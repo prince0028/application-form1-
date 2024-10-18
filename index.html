@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 1500px;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e0dad9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Application Form</h2>
+<p><strong>Note:</strong> Form is to be completed at least 21 days prior to date</p>
+
+<form action="/submit" method="post">
+    <fieldset>
+        <legend>Personal Details</legend>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter name here" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter address here" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email here" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter 10 digit number" required>
+
+        <label for="iq">IQ:</label>
+        <input type="text" id="iq" name="iq" placeholder="Enter IQ here" required>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+
+        <label for="outing-date">Date of Proposed Outing:</label>
+        <input type="date" id="outing-date" name="outing-date" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Check All That Apply</legend>
+        <input type="checkbox" id="tattoos" name="tattoos">
+        <label for="tattoos">I have tattoos and/or piercings</label>
+
+        <input type="checkbox" id="age" name="age">
+        <label for="age">I am more than 2 years older than my daughter</label>
+
+        <input type="checkbox" id="van" name="van">
+        <label for="van">I own a panel van or V8 ute</label>
+
+        <input type="checkbox" id="work" name="work">
+        <label for="work">I work full-time</label>
+
+        <input type="checkbox" id="rich-parents" name="rich-parents">
+        <label for="rich-parents">My parents are rich</label>
+
+        <input type="checkbox" id="public-date" name="public-date">
+        <label for="public-date">Is the date at a well lit public location</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="political">Political Persuasion:</label>
+        <select id="political" name="political">
+            <option value="left-wing">Left Wing</option>
+            <option value="right-wing">Right Wing</option>
+            <option value="centrist">Centrist</option>
+        </select>
+
+        <label for="education">Education Level Completed:</label>
+        <select id="education" name="education">
+            <option value="high-school">High School</option>
+            <option value="university">University</option>
+            <option value="postgraduate">Postgraduate</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Essay Section</legend>
+        <label for="essay">In 50 words or more explain why you want to date my daughter</label>
+        <textarea id="essay" name="essay" rows="4" required></textarea>
+
+        <label for="references">Please upload contact details for 2 references</label>
+        <textarea id="references" name="references" rows="2" required></textarea>
+    </fieldset>
+
+    <button type="submit">Send Your Application</button>
+</form>
+
+</body>
+</html>
